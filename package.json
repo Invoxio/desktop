@@ -1,16 +1,16 @@
 {
-  "name": "reactron",
-  "version": "1.0.0",
+  "name": "invoxio-electron",
+  "version": "0.0.0",
   "description": "A full featured and highly scalable electron-react boilerplate",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mjangir/reactron.git"
+    "url": "git@github.com:Invoxio/reactron.git"
   },
   "engines": {
     "npm": ">=5",
     "node": ">=8"
   },
-  "author": "Manish Jangir",
+  "author": "Manish Jangir, Timothy Meade",
   "license": "MIT",
   "scripts": {
     "analyze:clean": "rimraf stats.json",
@@ -56,16 +56,16 @@
     "package-win": "npm run release:clean && npm run build && build --win --x64"
   },
   "build": {
-    "appId": "org.mjangir.reactron",
+    "appId": "org.invoxio.electron",
     "asar": true,
     "files": [
+      "resources/",
       "build/",
       "node_modules/",
       "electron/",
-      "package.json",
-      "resources"
+      "package.json"
     ],
-    "copyright": "©2018 Reactron Boilerplate",
+    "copyright": "©2018 Reactron Boilerplate, ©2019 Invoxio",
     "mac": {
       "category": "public.app-category.productivity",
       "artifactName": "${productName}-${version}-${arch}.${ext}"
@@ -73,30 +73,29 @@
     "linux": {
       "category": "Chat;GNOME;GTK;Network;InstantMessaging",
       "packageCategory": "GNOME;GTK;Network;InstantMessaging",
-      "description": "Reactron Desktop Client for Linux",
+      "description": "Invoxio Desktop Client for Linux",
       "target": [
         "deb",
         "zip",
         "AppImage",
         "snap"
       ],
-      "maintainer": "Manish Jangir <mjangir70@gmail.com>",
+      "maintainer": "Manish Jangir <mjangir70@gmail.com>, Timothy Meade <tim@invoxio.com>",
       "artifactName": "${productName}-${version}-${arch}.${ext}"
     },
     "deb": {
-      "synopsis": "Reactron Desktop App",
+      "synopsis": "Invoxio Desktop App",
       "afterInstall": "./scripts/debian-add-repo.sh",
       "afterRemove": "./scripts/debian-uninstaller.sh"
     },
     "snap": {
-      "synopsis": "Reactron Desktop App"
+      "synopsis": "Invoxio Desktop App"
     },
     "dmg": {
-      "background": "build/appdmg.png",
-      "icon": "build/icon.icns",
+      "background": "resources/appdmg.png",
+      "icon": "resources/icon.icns",
       "iconSize": 100,
-      "contents": [
-        {
+      "contents": [{
           "x": 380,
           "y": 280,
           "type": "link",
@@ -114,17 +113,15 @@
       }
     },
     "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "ia32",
-            "x64"
-          ]
-        }
-      ],
-      "icon": "build/icon.ico",
-      "publisherName": "Manish Jangir"
+      "target": [{
+        "target": "nsis",
+        "arch": [
+          "ia32",
+          "x64"
+        ]
+      }],
+      "icon": "resources/icon.ico",
+      "publisherName": "Timothy Meade"
     },
     "nsis": {
       "perMachine": true,
@@ -135,13 +132,11 @@
       "buildResources": "resources",
       "output": "release"
     },
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "mjangir",
-        "repo": "reactron"
-      }
-    ]
+    "publish": [{
+      "provider": "github",
+      "owner": "Invoxio",
+      "repo": "reactron"
+    }]
   },
   "lint-staged": {
     "*.js": [

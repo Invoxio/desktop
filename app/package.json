@@ -1,24 +1,23 @@
 {
-  "name": "reactron",
-  "productName": "Reactron",
-  "version": "1.0.8",
-  "description": "Reactron Desktop App",
+  "name": "invoxio-desktop",
+  "productName": "InvoxioDesktop",
+  "version": "0.0.1",
+  "description": "Invoxio Desktop App",
   "license": "Apache-2.0",
-  "copyright": "Manish Jangir",
+  "copyright": "©2019 Invoxio Incorporated",
   "author": {
-    "name": "Manish Jangir",
-    "email": "mjangir70@gmail.com"
+    "name": "Timothy Meade",
+    "email": "tim@invoxio.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mjangir/reactron.git"
+    "url": "https://github.com/Invoxio/reactron.git"
   },
   "bugs": {
-    "url": "https://github.com/mjangir/reactron/issues"
+    "url": "https://github.com/Invoxio/reactron/issues"
   },
   "main": "./electron/main.prod.js",
   "keywords": [
-    "Reactron",
     "react with electron",
     "electron",
     "electron boilerplate",
