@@ -11,24 +11,25 @@ import messages from './messages';
 /* eslint-disable react/prefer-stateless-function */
 class Header extends React.Component {
   render() {
-    return (
-      <div>
-        <A href="https://twitter.com/mxstbr">
-          <Img src={Banner} alt="react-boilerplate - Logo" />
-        </A>
-        <NavBar>
-          <HeaderLink to="/">
-            <FormattedMessage {...messages.home} />
-          </HeaderLink>
-          <HeaderLink to="/features">
-            <FormattedMessage {...messages.features} />
-          </HeaderLink>
-          <HeaderLink to="/settings">
-            <FormattedMessage {...messages.settings} />
-          </HeaderLink>
-        </NavBar>
-      </div>
-    );
+    return <div>Menu Here</div>;
+    // return (
+    //   <div>
+    //     <A href="https://twitter.com/mxstbr">
+    //       <Img src={Banner} alt="react-boilerplate - Logo" />
+    //     </A>
+    //     <NavBar>
+    //       <HeaderLink to="/">
+    //         <FormattedMessage {...messages.home} />
+    //       </HeaderLink>
+    //       <HeaderLink to="/features">
+    //         <FormattedMessage {...messages.features} />
+    //       </HeaderLink>
+    //       <HeaderLink to="/settings">
+    //         <FormattedMessage {...messages.settings} />
+    //       </HeaderLink>
+    //     </NavBar>
+    //   </div>
+    // );
   }
 }
 
